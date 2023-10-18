@@ -1,9 +1,12 @@
 package org.learning.java;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class BigliettoTreno {
     public static void main(String[] args) {
+
+        DecimalFormat df = new DecimalFormat("#.00");
 
         Scanner scan = new Scanner(System.in);
         System.out.println("inserisci i chilometri:");
@@ -25,7 +28,7 @@ public class BigliettoTreno {
             prezzoFinale = prezzoBase;
         }
 
-        System.out.println("Il prezzo totale del biglietto è: " + prezzoFinale + " €");
+        System.out.println("Il prezzo totale del biglietto è: " + df.format(prezzoFinale) + " €");
 
         scan.close();
 
