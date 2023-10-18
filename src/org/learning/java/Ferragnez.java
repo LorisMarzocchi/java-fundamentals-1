@@ -1,6 +1,6 @@
 package org.learning.java;
 
-import java.util.Objects;
+
 import java.util.Scanner;
 
 public class Ferragnez {
@@ -13,12 +13,19 @@ public class Ferragnez {
         boolean nomeTrovato = false;
 
         String[] invitati = { "Dua Lipa", "Paris Hilton", "Manuel Agnelli", "J-Ax", "Francesco Totti", "Ilary Blasi", "Bebe Vio", "Luis", "Pardis Zarei", "Martina Maccherone", "Rachel Zeilic"};
-        for (int i = 0; i < invitati.length; i++) {
+        int i = 0;
+        while (i < invitati.length && !nomeTrovato){
+            if (nomeUtente.equals(invitati[i])){
+                nomeTrovato = true;
+            }
+            i++;
+        }
+/*        for (int i = 0; i < invitati.length; i++) {
             if (nomeUtente.equals(invitati[i])){
                 nomeTrovato = true;
                 break;
             }
-        }
+        }*/
         if (nomeTrovato) {
             System.out.println("Puoi entrare");
         }else {
